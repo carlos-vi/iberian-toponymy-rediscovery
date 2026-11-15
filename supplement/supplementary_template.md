@@ -1,6 +1,8 @@
 # Supplementary material — Rediscovery as validation: unsupervised analysis of Iberian place names recovers known dialect areas, isoglosses, and historical frontiers
 
-This document gives the details of the data and methods and the full results behind every number in the article. The tables are generated automatically from the files in `results/` by `src/70_supplement.py`; the script that produces each file is given in §S9.
+This document gives the details of the data and methods and the full results behind every number in the article.
+
+The code and the snapshot of the raw data are in the public repository https://github.com/carlos-vi/iberian-toponymy-rediscovery, and the file and folder names used below refer to it. The repository stores `src/`, `data/raw/` and `supplement/`. The folders `data/derived/`, `results/`, `figures/` and `logs/` are not stored: they are written when the code is run (§S9). The tables of this document are generated automatically from the files in `results/` by `src/70_supplement.py`; the script that produces each file is given in §S9.
 
 ---
 
@@ -329,8 +331,9 @@ It is set to 0 when the rate inside the window is not higher than outside, or wh
 
 **Running the analysis.**
 
+- **Repository.** https://github.com/carlos-vi/iberian-toponymy-rediscovery. It holds the code (`src/`), the snapshot of the raw data (`data/raw/`) and the template of this document (`supplement/`).
 - **Requirements.** Python 3.11 with the packages in `requirements.txt`. The analysis needs about 2 GB of memory and runs in 35–60 minutes on a laptop.
-- **Run.** `python src/run_all.py` runs every step from the raw snapshot in `data/raw/`; with `--download` it first downloads the data again. Each step writes a log to `logs/`.
+- **Run.** `python src/run_all.py` runs every step from the raw snapshot in `data/raw/`; with `--download` it first downloads the data again. The Natural Earth layers of the base maps are not part of the snapshot and are downloaded on the first run. The run creates `data/derived/`, `results/`, `figures/` and `logs/` (one log per step) and renders this document in `supplement/`.
 
 **Table S37.** Scripts and their outputs.
 
